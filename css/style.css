@@ -1,0 +1,76 @@
+/* css/style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #ccc;
+}
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+main {
+  padding: 2rem;
+  scroll-behavior: smooth;
+}
+.hero {
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.gallery {
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+}
+.gallery img {
+  width: 100%;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+.footer-quote {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.footer-quote img {
+  height: 60px;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  color: #666;
+  border-top: 1px solid #ccc;
+}
