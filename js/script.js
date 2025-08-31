@@ -1,5 +1,6 @@
 /* js/script.js */
 document.addEventListener('DOMContentLoaded', () => {
+  // Gallery Slideshow
   document.querySelectorAll('.gallery').forEach(gallery => {
     const images = gallery.dataset.images.split(',');
     let current = 0;
@@ -12,4 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
       imgEl.src = images[current];
     });
   });
+
+  // Scroll reveal animations
+  const reveals = document.querySelectorAll('.reveal, section, .project');
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 });
